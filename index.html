@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="moon.svg" type="image/svg+xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Rightly Guided</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1>THE RIGHTLY GUIDED CALIPHS</h1>
+            <p class="subtitle">AI Emulating the Wisdom & Justice of the Islam's Caliphs</p>
+        </header>
+
+        <div id="personality-switcher" class="personality-switcher" role="tablist"
+            aria-label="Select Caliph personality">
+            <button role="tab" aria-selected="true" aria-controls="chat-box" id="switch-umar"
+                data-personality="umar">Hazrat Umar (RA)</button>
+            <button role="tab" aria-selected="false" aria-controls="chat-box" id="switch-abubakr"
+                data-personality="abubakr">Hazrat Abu Bakr (RA)</button>
+            <button role="tab" aria-selected="false" aria-controls="chat-box" id="switch-uthman"
+                data-personality="uthman">Hazrat Uthman (RA)</button>
+            <button role="tab" aria-selected="false" aria-controls="chat-box" id="switch-ali"
+                data-personality="ali">Hazrat Ali (RA)</button>
+        </div>
+
+        <section id="chat-box" class="chat-box" aria-live="polite" aria-atomic="false">
+            <!-- Chat messages go here -->
+        </section>
+
+
+
+        <div id="loading-indicator" class="loading hidden" aria-hidden="true">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+        <form id="chat-form" class="chat-form" aria-label="Chat with Hazrat Umar">
+            <input type="text" id="user-input" placeholder="Ask for wisdom or guidance..." required autocomplete="off"
+                aria-required="true" aria-describedby="inputHelp" />
+            <button type="submit" aria-label="Send message">Send</button>
+        </form>
+
+        <p id="inputHelp" class="visually-hidden">Enter your question and press Send to receive wisdom.</p>
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
